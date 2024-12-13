@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaculTrack - Track Your Academic Success</title>
+    <link rel="icon" type="image/png" href="white.png">
+    <style>
+        /* Basic CSS for layout and styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(150deg, #f6f8f7, #43324f, #f6f8f7);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #584158;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Container for logo and FaculTrack text */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        header img {
+            width: 10%;
+            margin-right: 0;
+        }
+
+        header h2 {
+            font-size: 1.8em;
+            margin: 0;
+            font-family: cursive;
+        }
+
+        /* Styles for navigation links */
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 15px; /* Controls spacing between each nav item */
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .banner {
+            background-image: url(sn.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 160px 40px;
+            text-align: center;
+        }
+
+        .banner-content {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: black;
+            padding: 20px;
+            border-radius: 5px;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 10px 40px 100px rgba(17, 17, 17, 0.3);
+        }
+
+        .banner-content h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .banner-content p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Layout for video and contact information */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .video-container {
+            width: 45%;
+            margin-right: 20px;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info {
+            width: 45%;
+            display:inline-block;
+            font-size: 1.2em;
+            line-height: 1.1;
+            gap:initial;
+        }
+
+        footer {
+            background-color: #584158;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="white.png" alt="SMVITM LOGO">
+            <h2>FaculTrack</h2>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="faclogin.php">FacLogin</a>
+            <a href="adminlog.php">AdminLogin</a>
+            <a href="aboutus.html">AboutUs</a>
+            <a href="contactus.html">ContactUs</a>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <h1>Welcome to SMVITM FaculTrack</h1>
+            <p>Empowering educators, enriching academics, and embracing success—track your journey with SMVITM FaculTrack.</p>
+        </div>
+    </section>
+    
+    <!-- Video and Contact Information Section -->
+    <div class="content-container">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="sm.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="contact-info">
+            <p><strong>Address:</strong><br>Shri Madhwa Vadiraja Institute of Technology & Management, Vishwothama Nagar, Bantakal, Udupi - 574115, Karnataka, India.</p>
+            <p><strong>Website:</strong> <a href="https://sode-edu.in/" target="_blank">https://sode-edu.in/</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@sode-edu.in" style="color: inherit; text-decoration: none; cursor: pointer;">info@sode-edu.in</a></p>
+            <p><strong>Phone:</strong> +91-820-2589182 / +91-820-2589183</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FaculTrack - All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

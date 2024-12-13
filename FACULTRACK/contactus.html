@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FaculTrack</title>
+    <link rel="icon" type="image/png" href="white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(#ffdad5, #fff7f9);
+        }
+
+        /* Header Section */
+        header {
+            background-color: #584158;
+            padding: 10px 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        header img {
+            width: 10%;
+            height: auto;
+        }
+
+        header h2 {
+            font-size: 1.8em;
+            font-family: cursive;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .hamburger div {
+            height: 4px;
+            width: 100%;
+            background-color: #fbf7f7;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 0;
+            background-color: #000;
+            border-radius: 5px;
+            z-index: 10;
+            text-align: right;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 50px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-form {
+            flex: 1;
+            max-width: 50%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background: linear-gradient(270deg, #ff994f, #fa6d86);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(270deg, #fa6d86, #ff994f);
+        }
+
+        .contact-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #584158;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            width: 100%;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer i {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .contact-form {
+                max-width: 100%;
+            }
+
+            .contact-right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header with Logo -->
+<header>
+    <div class="logo-container">
+        <img src="white.png" alt="FaculTrack Logo">
+        <h2>FaculTrack</h2>
+    </div>
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="dropdown-menu">
+            <a href="home.html">Home</a>
+            <a href="faclogin.php">FacLogin</a>
+            <a href="adminlog.php">AdminLogin</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="9751b6a2-f8dd-4c84-8849-89fdf34d83a6">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- Contact Image -->
+    <div class="contact-right">
+        <img src="right_img.png" alt="Contact Us Image">
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 <span style="font-weight: bold; font-style: italic;">FaculTrack</span>. All Rights Reserved.</p>
+    <p>Made with <i class="fas fa-heart" style="color: red;"></i> by the FaculTrack Team.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector('.dropdown-menu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>

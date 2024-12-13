@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Sign Up - FaculTrack</title>
+  <link rel="icon" type="image/png" href="white.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic CSS for layout and styling */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f6f8f7, #45a049);
+      margin: 0;
+      padding: 0;
+      background: url('background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background-color: #584158;
+      padding: 10px 20px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    header img {
+      width: 11%;
+    }
+
+    header h2 {
+      font-size: 1.8em;
+      font-family: cursive;
+    }
+
+    /* Hamburger Menu */
+    .menu-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .hamburger {
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      height: 5px;
+      width: 100%;
+      background-color: #fbf7f7;
+      margin: 5px 0;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #575757;
+    }
+
+    /* Sign Up Section */
+    .signup-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      color: #fefffe;
+      margin-bottom: 20px;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"] {
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #12723a;
+    }
+
+    .signup-form button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #12723a;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .signup-form button:hover {
+      background-color: #45a049;
+    }
+
+    .login-link {
+      margin-top: 20px;
+      display: block;
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    .login-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #584158;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header with navigation -->
+  <header>
+    <div class="logo-container">
+        <img src="smvitm.jpg" alt="SMVITM LOGO">
+        <h2>FaculTrack</h2>
+    </div>
+  </header>
+
+  <!-- Hamburger Menu -->
+  <div class="menu-container">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="dropdown-menu">
+      <a href="home.html">Home</a>
+      <a href="faclogin.php">FacLogin</a>
+      <a href="adminlog.php">AdminLogin</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Faculty Sign-Up Section -->
+  <div class="signup-container">
+    <h2 style="color: black;">Admin Sign Up</h2>
+    <form class="signup-form" action="adminsignup.php" method="POST">
+        <input type="text" name="adminID" placeholder="adminID" required>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="date"  name="birthdate" placeholder="Birthdate" required>
+        <input type="text"  name="fav_color" placeholder="Favorite Color" required>
+        <button type="submit">Sign Up</button>
+    </form>
+    <a href="adminlog.php" class="login-link">Already have an account? Login here</a>
+  </div>
+<br>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 FaculTrack. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.querySelector('.dropdown-menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+  
+</body>
+</html>
